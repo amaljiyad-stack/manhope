@@ -1,0 +1,20 @@
+MANHOPE MOBILITY — VERCEL DEPLOYMENT (QUICK STEPS)
+
+1. Unzip manhope-mobility-vercel-ready.zip.
+2. Open https://supabase.com/dashboard and create your project.
+3. Paste all of supabase/schema.sql into Supabase SQL Editor and run it.
+4. Copy your Supabase Project URL and publishable/anon key.
+5. Upload the extracted SOURCE folder to a GitHub repository.
+6. Open https://vercel.com/new and import that repository.
+7. In Vercel project Environment Variables add:
+     VITE_SUPABASE_URL        = your Supabase project URL
+     VITE_SUPABASE_ANON_KEY   = your Supabase publishable/anon PUBLIC key
+   IMPORTANT: NEVER USE THE SERVICE ROLE OR SECRET KEY.
+8. Deploy. Set your Vercel site address under Supabase Auth > URL Configuration
+   (Site URL and Redirect URLs), so signup and password reset work.
+9. Sign up, then add vehicles or select Import original 14 example vehicles.
+
+NOTE: Without Supabase variables, app works only in LOCAL DEMO mode: data
+is saved in that browser but there are no real user accounts/synchronization.
+
+Full setup: README.md
